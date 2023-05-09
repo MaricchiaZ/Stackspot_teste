@@ -1,0 +1,2 @@
+    prinft("{{inputs.msg_2}}\n");
+    return 0;

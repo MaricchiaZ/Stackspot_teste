@@ -1,0 +1,12 @@
+name: template-exemplo
+description: meu primeiro template
+types:
+  - app-template
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name
+  - label: Mensagem do print
+    type: text
+    name: msg_printf

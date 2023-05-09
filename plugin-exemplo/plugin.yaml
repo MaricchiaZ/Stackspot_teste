@@ -1,0 +1,31 @@
+name: plugin-exemplo
+description: meu primeiro plugin
+display-name: plugin-exemplo
+picture: plugin.png
+category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+compatibility:
+  - java
+  - spring
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies
+  - "Api"
+types:
+  - app
+inputs:
+  - label: Mensagem 2
+    type: text
+    name: msg_2
+hooks:
+  - type: edit
+    path: ./main.c
+    working-dir: "{{project_name}}"
+    trigger: after-render
+    changes:
+      - search:
+          string: "return 0;"
+          replace-by:
+            string: "return 0;"
+            snippet: snippets/text.txt
